@@ -1,0 +1,22 @@
+name: Build and deploy
+on: [push]
+jobs:
+  java-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down code
+        uses: actions/checkout@v4
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Build and unit test
+        run: cd java && ./gradlew clean build
+  java-run:
+    runs-on: ubuntu-latest
+    needs: java-test
+    steps:
+      - name: Pull down code
+        uses: actions/checkout@v4
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Run application
+        run: cd java && ./gradlew run
