@@ -4,9 +4,9 @@ This project has ready made local workspaces for testing code in a specific lang
 
 ## Current Languages
 - Java
+- Python
 
 ## Future Languages
 - Go
-- Python
 - JavaScript
 - Haskell
