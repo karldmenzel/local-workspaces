@@ -6,7 +6,7 @@ This project has ready made local workspaces for testing code in a specific lang
 - Java
 - Python
 - Go
+- JavaScript
 
 ## Future Languages
-- JavaScript
 - Haskell

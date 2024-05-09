@@ -1,0 +1,25 @@
+{
+  "name": "local-javascript-workspace",
+  "version": "1.0.0",
+  "description": "A workspace for testing Javascript code.",
+  "main": "src/index.js",
+  "scripts": {
+  	"start": "node src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karldmenzel/local-workspaces/"
+  },
+  "keywords": [
+    "javascript",
+    "local",
+    "workspace",
+    "demo"
+  ],
+  "author": "@karldmenzel",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

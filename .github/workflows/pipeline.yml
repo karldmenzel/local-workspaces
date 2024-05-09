@@ -3,6 +3,7 @@ on: [push]
 env:
     PYTHON_VERSION: '3.x'
     GO_VERSION: '1.22.x'
+    NODE_VERSION: '20.x'
 jobs:
   java-test:
     runs-on: ubuntu-latest
@@ -69,3 +70,28 @@ jobs:
         run: |
             cd go/internal/mypackage/
             go run .
+  javascript-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Test application
+        run: |
+            cd javascript
+            npm ci
+            npm test
+  javascript-run:
+    runs-on: ubuntu-latest
+    needs: javascript-test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Run application
+        run: |
+            cd javascript
+            npm ci
+            npm start
