@@ -95,3 +95,23 @@ jobs:
             cd javascript
             npm ci
             npm start
+  c-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test application
+        run: |
+            cd c
+            gcc --version
+            make test
+  c-run:
+    runs-on: ubuntu-latest
+    needs: c-test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run application
+        run: |
+            cd c
+            gcc --version
+            make all
+
