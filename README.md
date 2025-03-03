@@ -11,3 +11,5 @@ This project has ready made local workspaces for testing code in a specific lang
 
 ## Future Languages
 - Haskell
+- Rust
+- Ruby
