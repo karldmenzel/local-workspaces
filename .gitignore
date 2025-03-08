@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,gradle,python,node,c
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle,python,node,c
 
+### JetBrains ###
+c/.idea/
+
 ### C ###
 
 # Prerequisites
