@@ -19,3 +19,7 @@
 ##  How to run the tests
 
 `make test`
+
+## To Dissassemble
+
+`objdump -S build/hello`
